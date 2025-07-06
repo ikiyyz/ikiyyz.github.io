@@ -12331,6 +12331,9 @@ h5,
   width: 100%;
   z-index: 0;
   position: relative;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .ftco-about .img-about .img {
@@ -12342,16 +12345,28 @@ h5,
   background-position: center;
   background-repeat: no-repeat;
   min-height: 500px;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 }
 
 @media (max-width: 767.98px) {
   .ftco-about .img-about .img {
     min-height: 500px;
     height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
   }
   
   .ftco-about .img-about {
     margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  
+  .ftco-about .row {
+    align-items: center;
   }
 }
 
@@ -12359,6 +12374,18 @@ h5,
   .ftco-about .img-about .img {
     min-height: 500px;
     height: 500px;
+    border-radius: 12px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .ftco-about .img-about {
+    padding: 0 10px;
+    margin-bottom: 40px;
+  }
+  
+  .ftco-about .row {
+    justify-content: center;
   }
 }
 
